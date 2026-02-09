@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATM Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="atm">
+    <h2>ATM Machine</h2>
+
+    <div id="messages"></div>
+
+    <!-- PIN input -->
+    <div class="screen" id="pin-screen">
+        <input type="password" id="pin" placeholder="Enter 4-digit PIN">
+        <button onclick="verifyPin()">Submit PIN</button>
+    </div>
+
+    <!-- ATM menu -->
+    <div class="screen" id="menu-screen" style="display:none;">
+        <p>Welcome! Choose an option:</p>
+        <button onclick="checkBalance()">Check Balance</button>
+        <button onclick="showWithdraw()">Withdraw Money</button>
+        <button onclick="showDeposit()">Deposit Money</button>
+        <button onclick="exitATM()">Exit</button>
+    </div>
+
+    <!-- Withdraw -->
+    <div class="screen" id="withdraw-screen" style="display:none;">
+        <input type="number" id="withdraw-amount" placeholder="Enter amount to withdraw">
+        <button onclick="withdrawMoney()">Withdraw</button>
+        <button onclick="backToMenu()">Back</button>
+    </div>
+
+    <!-- Deposit -->
+    <div class="screen" id="deposit-screen" style="display:none;">
+        <input type="number" id="deposit-amount" placeholder="Enter amount to deposit">
+        <button onclick="depositMoney()">Deposit</button>
+        <button onclick="backToMenu()">Back</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
